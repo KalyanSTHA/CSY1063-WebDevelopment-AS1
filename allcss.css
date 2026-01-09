@@ -197,8 +197,6 @@ body {
   border-radius: 10px;
 }
 
-
-
 .information {
   margin-bottom: 20px;
   padding: 10px;
@@ -224,4 +222,71 @@ body {
   margin-bottom: 20px;
   border-bottom: 2px dotted #8b5a2b;
   padding-bottom: 10px;
+}
+.videosection {
+  padding: 40px 20px;
+  max-width: 900px;
+  text-align: center;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.videobox {
+  background-color: #fff8dc;
+  border: 5px solid #8b5a2b;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.videoframe {
+  width: 100%;
+  height: 450px;
+  border: 3px solid #5c4033;
+  background-color: #3b2f2f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.videoframe iframe {
+  width: 100%;
+  height: 100%;
+  border: solid;
+}
+
+.videolinksection {
+  background-color: #fff8dc;
+  border: 4px dashed #8b5a2b;
+  padding: 30px;
+  margin-top: 20px;
+}
+
+.videolinksection h2 {
+  font-family: "Times New Roman", serif;
+  font-size: 24px;
+  color: #5c4033;
+  margin-bottom: 15px;
+}
+
+.videolink {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #5c4033;
+  color: #faebd7;
+  text-decoration: none;
+  border: 3px solid #8b5a2b;
+  transition: transform 0.3s;
+}
+
+.videolink:hover {
+  background-color: #8b5a2b;
+  transform: scale(1.1);
+}
+
+.descriptionbox {
+  background-color: #fff8dc;
+  border: 3px solid #5c4033;
+  padding: 20px;
+  margin-top: 30px;
+  text-align: left;
 }
