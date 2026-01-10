@@ -5,6 +5,12 @@ body {
   background-color: #faebd7;
   color: #3b2f2f;
 }
+.heads {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #d2b48c;
+  border-bottom: 3px groove #5c4033;
+}
 
 /* Navigation Bar that will remain constant throught all pages*/
 .nvibar {
@@ -95,12 +101,7 @@ body {
   border: 2px dotted #5c4033;
   background-color: #d2b48c;
 }
-.heads {
-  text-align: center;
-  padding: 40px 20px;
-  background-color: #d2b48c;
-  border-bottom: 3px groove #5c4033;
-}
+
 .projects {
   padding: 40px 20px;
   max-width: 1000px;
@@ -185,6 +186,7 @@ body {
   gap: 40px;
   padding: 40px 20px;
   max-width: 1000px;
+  margin: 0 auto;
 }
 
 .contactinfo {
@@ -215,7 +217,7 @@ body {
   font-size: 16px;
   color: #3b2f2f;
 }
-.contactinfo h2{
+.contactinfo h2,.contactform h2{
   font-family: "Times New Roman", serif;
   font-size: 24px;
   color: #5c4033;
@@ -223,6 +225,63 @@ body {
   border-bottom: 2px dotted #8b5a2b;
   padding-bottom: 10px;
 }
+
+.contactform{
+  flex: 1;
+   justify-content: center;
+  min-width: 280px;
+  max-width: 400px;
+  background-color: #fff8dc;
+  padding: 30px;
+  border: 4px solid #8b5a2b;
+  border-radius: 10px;
+}
+
+.formgroup {
+  margin-bottom: 20px;
+}
+
+.formgroup label {
+  display: block;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #5c4033;
+  margin-bottom: 5px;
+}
+
+.formgroup input,
+.formgroup textarea {
+  width: 100%;
+  padding: 12px;
+  font-family: Georgia, serif;
+  font-size: 14px;
+  border: 2px solid #8b5a2b;
+  background-color: #faebd7;
+  color: #3b2f2f;
+  transition: transform 0.2s;
+}
+
+.formgroup textarea {
+  height: 120px;
+}
+
+.submit {
+  width: 100%;
+  padding: 15px;
+  background-color: #5c4033;
+  color: #faebd7;
+  border: 3px solid #8b5a2b;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  transition: transform 0.3s;
+}
+
+.submit:hover {
+  background-color: #8b5a2b;
+  transform: scale(1.05);
+}
+
+
 .videosection {
   padding: 40px 20px;
   max-width: 900px;
