@@ -388,4 +388,48 @@ body {
   margin-bottom: 15px;
   text-align: justify;
 }
+@media (max-width: 770px) {
+  .nvibuttons {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
+  .nvibuttons a {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+  .mainintro {
+    flex-direction: column; 
+    text-align: center;     
+    padding: 30px 20px;
+  }
+
+  .galleryphoto {
+    width: 100%;
+    max-width: 300px;
+    margin:10px auto;
+  }
+
+  .intro h1 {
+    font-size: 22px; 
+  }
+
+  .projectrow {
+    flex-direction: column;
+  }
+
+  .cardproject {
+    margin-bottom: 20px;
+  }
+  .contact {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .videoframe {
+    height: 250px;
+  }
+  .report {
+    padding: 20px;
+  }
+}
