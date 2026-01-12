@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -6,8 +7,15 @@
     <link rel="stylesheet" href="allcss.css">
 </head>
 <body>
-<!--For navigation bar-->
-    <nav class="nvibar">
+    <!--For navigation bar-->
+<nav class="nvibar">
+     <!-- Hamburger icon (label for checkbox) that is  only visible on mobile -->
+        <input type="checkbox" id="menu" class="menu">
+    <label for="menu" class="icons">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
         <div class="nvibuttons">
             <a href="index.html" class="rn">Home</a>
             <a href="project.html">Projects</a>
@@ -16,44 +24,51 @@
             <a href="sitereport.html">Report</a>
         </div>
      </nav>
-    <!--For main introduction with photo and paragraph-->
+       <!--For main introduction with photo and paragraph-->
     <section class="mainintro">
         <div class="photo1">
-            <img src="suit.jpeg"></div>
+            <img src="suit.jpeg" alt="Photo of Me">
         </div>
         <div class="subintro">
-            <h1> hello text</h1>
-            <p> Something description of myself</p>
+            <h1> Kalyan Shrestha</h1>
+            <p> I'm a student who's into tech, and the creator of this website. This project also happens to be my entire portfolio of projects at the moment.</p>
+            <p> After a long stay in my "Zero Project Era" I've officially entered my "One Project Era", the progress is crazy. I'm currently 1 for 1.</p>
+        </div>
+        <div class="education">
+            <h2>Education</h2>
+            <p>Secondary Level - Manakamana Secondary School </p>
+           <p>High School - Nami International School </p>
+           <p>Undergraduate - Nami College</p>
+
         </div>
     </section>
-    <!-- Gallery Section -->
+        <!-- Gallery Section -->
     <section class="gallerysection">
         <h2>Photo Gallery</h2>
         <div class="gallery">
             <div class="galleryphoto">
-                <img src="./images/img1.JPG">
+                <img src="./images/img1.JPG" alt="Photo of my Gallery">
             </div>
             <div class="galleryphoto">
-                <img src="./images/img2.JPG">
+                <img src="./images/img2.JPG" alt="Photo of my Gallery">
             </div>
             <div class="galleryphoto">
-                <img src="./images/img3.JPG">
+                <img src="./images/img3.JPG" alt="Photo of my Gallery">
             </div>
             <div class="galleryphoto">
-                <img src="./images/img4.JPG">
+                <img src="./images/img4.JPG" alt="Photo of my Gallery">
             </div>
             <div class="galleryphoto">
-                <img src="./images/img5.JPG">
+                <img src="./images/img5.JPG" alt="Photo of my Gallery">
             </div>
             <div class="galleryphoto">
-                <img src="./images/img6.JPG">
+                <img src="./images/img6.JPG" alt="Photo of my Gallery">
             </div>
         </div>
     </section>
 
-
-
-    
+    <footer class="foots">
+        <p>By Kalyan</p>
+    </footer>
 </body>
 </html>
-

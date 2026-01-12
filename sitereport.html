@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,12 +9,19 @@
 <body>
 <!--For navigation bar-->
     <nav class="nvibar">
+            <input type="checkbox" id="menu" class="menu">
+    <!-- Hamburger icon (label for checkbox) that is  only visible on mobile -->
+    <label for="menu" class="icons">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
         <div class="nvibuttons">
             <a href="index.html" >Home</a>
             <a href="project.html">Projects</a>
             <a href="contactinfo.html">Contact Me</a>
             <a href="videodemo.html">Video Demo</a>
-            <a href="sitereport.html"class="rn">Report</a>
+            <a href="sitereport.html" class="rn">Report</a>
         </div>
      </nav>
      <!--Header of the page-->
@@ -23,20 +31,32 @@
      <!--For essay/report-->
      <section class="reportbox">
              <div class="report">
-        <h2>xxxx</h2> <!--Write about Journey-->
-        <p>xxxxx</p>
-        <h3>xxxx</h3> <!--Write about learning process-->
-        <p>xxxx</p>
-        <h3> xxx</h3> <!--Write about Challenges-->
-        <p>xxx</p>
-         <h3> xxx</h3> <!--Write about debugging-->
-        <p>xxx</p>
- <h3> xxx</h3> <!--Write about design decisions-->
-        <p>xxx</p>
-        <h3> xxx</h3> <!--Write about developed skills-->
-        <p>xxx</p>
-        <h3> xxx</h3> <!--Write about overall reflection-->
-        <p>xxx</p>
-     </div>
+        <h2>My Web Development Journey</h2> <!--Write about Journey-->
+        <p>I first learned about web development when I was in high school. Although I had a little experience back then, it was mostly limited to the very basics of HTML and CSS. Before starting this module, I still felt like a beginner and hadn't built any real projects yet. Because of this, the idea of building a complete portfolio website seemed quite overwhelming. However, as I progressed through the lessons, I began to understand the fundamentals of how the web works.</p>
+        <h3>The Learning Process</h3> <!--Write about learning process-->
+        <p>In the initial weeks, I learned how to use GitHub and the basic structure of HTML documents. We practiced using semantic elements like header, nav, section, and footer to organize content properly. For me, CSS was the most challenging part at first. It was difficult to understand the Box Model and how padding, margins, and borders worked together to move elements on the page. I often found myself moving one thing only to have another move by mistake.</p>
+        <h3>Challenges Faced</h3> <!--Write about Challenges-->
+        <p>The process of creating hamburger icon that only appears in mobile was very difficult for me.On the technical side, understanding media queries took some time. It was a struggle to make the website look good on a mobile screen while keeping the desktop version organized. I also spent a lot of time choosing a color theme.At last, I choose a warm brownish colour palette which I quite liked.</p>
+         <h3>Process of Debugging</h3> <!--Write about debugging-->
+        <p>Initially, debugging was very frustrating, but it became easier with time. I learned how to use browser developer tools to inspect elements and why certain styles weren't applying correctly. Most of my issues were simple mistakes like typos in class names or forgetting to close tags properly. Overtime, I developed the habit of checking my code carefuly before testing for the final result.</p>
+ <h3>Design Decisions</h3> <!--Write about design decisions-->
+        <p>For the design of this portfolio, I focused on balancing the aesthetics and readability:</p>
+        <p>I used warm tones [#faebd7, #8b5a2a, #5c4033, #3b2f2f]. I got this set of colours from a blog written in Piktochart website's "Cream White Color Combinations". 
+        I chose Georgia for body text because it is appealing and Arial for the navigation for clean look. I implemented a centered navigation bar for easy access to switch between pages. Also, I experimented with various kind of border styles to change visuals in each page.
+        </p>
+        <h3>Skills Developed</h3> <!--Write about developed skills-->
+        <p>Through this project, I have developed a solid foundation in HTML structure, CSS styling, responsive design, and problem solving. I now understand how to create complex layouts using Flexbox, apply CSS transitions for simple animations, and ensure that my websites work on different screen sizes.</p>
+        <h3> Reflection</h3> <!--Write about overall reflection-->
+        <p>This module gave me understanding of web development. As my first project, I am proud of what I have created and I am exicited to create a lot more. Different challenges in design decisions and debugging process helped me to learn and grow, I look fordward to adding future projects to this portfolio and continue to improve my skills in coming time.</p>
+     <h3>References</h3>
+    <p><a href="https://stackoverflow.com/questions/76693452/how-to-hamburger-menu-with-just-css">Reference for Hamburger Icon</a></p>
+    <p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/grid-template-columns">In depth about Grid template columns</a></p>
+    <p><a href="https://piktochart.com/tips/cream-color-palette">For Color Combination [Number 6]</a></p>
+</div>
      </section>
+     <footer class="foots">
+        <p>By Kalyan</p>
+    </footer>
+    </body>
     
+    </html>
