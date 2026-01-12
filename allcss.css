@@ -1,24 +1,97 @@
 
-/*for overall body's font, font color and background color*/
+/*Keyframes for animations effects */
+/*These are the animations that will be used throught of all the CSS*/
+@keyframes fadeup {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/*For icons that is only seen in mobile and can control 
+if navigation bar is shown or not in mobile*/
+.menu, .icons{
+  display: none;
+}
+.menu {
+  display: none;
+}
+.icons span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #faebd7;
+  border-radius: 2px;
+}
+
+/* Hamburger icon label that is only visible on mobile */
+.icons {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 24px;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+}
+
+/* For overall body's font, font color and background color, Georgia font and 
+subtle cream colored background*/
 body {
   font-family: Georgia, serif;
   background-color: #faebd7;
   color: #3b2f2f;
+  margin: 0;
+  padding: 0;
 }
+/*For header part in all of the pages except the home page*/
 .heads {
   text-align: center;
   padding: 40px 20px;
   background-color: #d2b48c;
   border-bottom: 3px groove #5c4033;
+  animation: fadein 0.9;
+}
+.foots{
+    background-color: #FAF9F6 ;
+    color: #5c4033;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    opacity:0.3;
+    animation: fadein 0.9;
 }
 
-/* Navigation Bar that will remain constant throught all pages*/
+/* Navigation Bar that will remain constant throughout all pages 
+Different font sizes, font family are used and transitions during hover is also added*/
 .nvibar {
   display: flex;
   justify-content: center;
   background-color: #5c4033;
   padding: 15px 20px;
   border: 2px solid #8b5a2b;
+  position: relative;
 }
 
 .nvibuttons {
@@ -31,39 +104,46 @@ body {
   padding: 10px 20px;
   font-family: Arial, sans-serif;
   font-size: 16px;
+  text-decoration: none;
   transition: transform 1s;
-
 }
-/*Animations on navigation button when hovering*/
+
 .nvibuttons a:hover {
   background-color: #8b5a2b;
   transform: scale(1.05);
   border-bottom: 3px solid #faebd7;
 }
-/*For when a navigation bar is selected*/
+
 .nvibuttons a.rn {
   background-color: #8b5a2b;
 }
-/*CSS for main introduction section*/
+/*For the main part of home page, Grid display is used and appropriate padding
+with good looking color combinations is used */
+
 .mainintro {
-  display: flex;
-  flex-direction: row;
-  padding: 15px 20px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 40px;
+  padding: 40px 60px;
   background-color: #fff8dc;
   border-bottom: 3px solid #8b5a2b;
-  align-items: center;  
+  align-items: center;
+  animation: fadein 0.9s;
 }
-/*For the first photo that is inside circle*/
+/*For the photo in the circle*/
 .photo1 {
   width: 250px;
   height: 250px;
   border: 5px solid #5c4033;
   border-radius: 50%;
-  margin-bottom: 40px;
   background-color: #d2b48c;
   display: flex;
   overflow: hidden;
-  margin-left: 80px;
+  animation: fadeup 1.5s;
+}
+
+.photo1:hover {
+  transform: scale(1.03);
 }
 
 .photo1 img {
@@ -71,34 +151,63 @@ body {
   height: 100%;
   object-fit: cover;
 }
-.subintro h1{
-  margin-left: 70px;
+/*CSS for the texts near the introduction photo which includes
+name, description and education*/
+
+.subintro  {
+  animation: slideInLeft 2.5s;
 }
-.subintro p{
+
+.subintro p {
   max-width: 520px;
-  margin-left: 40px;
   font-size: 18px;
+  margin: 10px 0;
+  line-height: 1.6;
 }
-/*For gallery section in first page*/
+
+.education {
+  line-height: 1.4;
+  animation: fadeup 2s;
+}
+
+.education h3 {
+  margin-bottom: 15px;
+}
+
+.education p {
+  margin: 8px 0;
+}
+/*Photo section including 6 different photos
+Compatible CSS is implemented and different CSS for during hover is also implemented*/
 .gallerysection {
-  padding: 25px 10px; 
+  padding: 40px 20px;
   text-align: center;
+  animation: fadein 3ms;
+}
+.gallerysection h2{
+  animation: fadeup 2s;
 }
 .gallery {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 30px;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
+
 .galleryphoto {
-  width: 190px;
   background-color: #fff8dc;
   border: 3px solid #8b5a2b;
-  padding: 20px; 
-  transition: transform 0.3s;
+  padding: 20px;
+  animation: fadeup 3s;
 }
+
 .galleryphoto:hover {
-  transform: scale(1.27);
+  transform: scale(1.20);
+  animation: fadein 0.5s;
 }
+
 .galleryphoto img {
   object-fit: cover;
   width: 100%;
@@ -106,30 +215,30 @@ body {
   border: 2px dotted #5c4033;
   background-color: #d2b48c;
 }
-
+/*For the projects Section with different CSS for font sizes, and hover*/
 .projects {
   padding: 40px 20px;
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1;
+  gap: 30px;
 }
 
 .projectrow {
-  display: flex;
-  margin-bottom: 30px;
-  gap: 20px;
+  animation: fadeup 1.5s;
 }
 
 .cardproject {
-  flex: 1;
   background-color: #fff8dc;
   border: 4px solid #8b5a2b;
   padding: 20px;
-  transition: transform 0.4s;
+  transition: transform 1s;
   position: relative;
+   transform: scale(1.03);
 }
 
 .cardproject:hover {
-  transform: scale(1.03);
   border-style: dashed;
 }
 
@@ -137,18 +246,25 @@ body {
   width: 100%;
   height: 200px;
   background-color: #d2b48c;
-  border: 2px inset #5c4033;
+  border: 2px  #5c4033;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 15px;
+  overflow: hidden;
 }
 
 .projectimage img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 1s ;
 }
+
+.cardproject:hover .projectimage img {
+  transform: scale(1.05);
+}
+
 .cardproject h3 {
   font-family: "Times New Roman", serif;
   font-size: 22px;
@@ -157,6 +273,7 @@ body {
   border-left: 4px solid #8b5a2b;
   padding-left: 10px;
 }
+
 .cardproject p {
   font-family: Arial, sans-serif;
   font-size: 14px;
@@ -164,30 +281,17 @@ body {
   line-height: 1.5;
 }
 
-.projectnumber {
-  position: absolute;
-  top: -15px;
-  left: -15px;
-  width: 40px;
-  height: 40px;
-  background-color: #5c4033;
-  color: #faebd7;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 18px;
-  border: 3px solid #8b5a2b;
+.wip {
+  text-align: center;
+  padding: 20px;
+  animation: fadein 1.5s;
 }
-.wip{
-   text-align: center;
-  padding: 5px 5px;
 
-}
+/*For contacts page, both contact me section and send me a mail section
+has required CSS, Css is different headers, paragraphs, hover*/
 .contact {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 40px;
   padding: 40px 20px;
   max-width: 1000px;
@@ -195,13 +299,12 @@ body {
 }
 
 .contactinfo {
-  flex: 1;
-  min-width: 280px;
-  max-width: 400px;
   background-color: #fff8dc;
   padding: 30px;
   border: 4px solid #8b5a2b;
   border-radius: 10px;
+  animation: fadeup 2s;
+  transition: transform 1;
 }
 
 .information {
@@ -209,6 +312,11 @@ body {
   padding: 10px;
   border-left: 4px dotted #5c4033;
   background-color: #faebd7;
+  transition: transform 0.2s;
+}
+
+.information:hover {
+  transform: translateX(11px);
 }
 
 .information h3 {
@@ -228,7 +336,9 @@ body {
   color: #3b2f2f;
   font-family: "Times New Roman", serif;
 }
-.contactinfo h2,.contactform h2{
+
+.contactinfo h2,
+.contactform h2 {
   font-family: "Times New Roman", serif;
   font-size: 24px;
   color: #5c4033;
@@ -237,15 +347,13 @@ body {
   padding-bottom: 10px;
 }
 
-.contactform{
-  flex: 1;
-   justify-content: center;
-  min-width: 280px;
-  max-width: 400px;
+.contactform {
   background-color: #fff8dc;
   padding: 30px;
   border: 4px solid #8b5a2b;
   border-radius: 10px;
+  animation: fadeup 2s;
+  transition: transform 1;
 }
 
 .formgroup {
@@ -269,11 +377,11 @@ body {
   border: 2px solid #8b5a2b;
   background-color: #faebd7;
   color: #3b2f2f;
-  transition: transform 0.2s;
+  box-sizing: border-box;
 }
 
 .formgroup textarea {
-  height: 120px;
+  height: 120px
 }
 
 .submit {
@@ -284,35 +392,25 @@ body {
   border: 3px solid #8b5a2b;
   font-family: Arial, sans-serif;
   font-size: 16px;
-  transition: transform 0.3s;
+  cursor: pointer;
+  transition: transform 1s;
 }
 
 .submit:hover {
   background-color: #8b5a2b;
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
-
+/* Video section for Video demonstration page */
 .videosection {
   padding: 40px 20px;
   max-width: 900px;
   text-align: center;
   margin: 0 auto;
-  justify-content: center;
-}
-
-.videobox {
-  background-color: #fff8dc;
-  border: 5px solid #8b5a2b;
-  padding: 20px;
-  margin-bottom: 30px;
+  animation: fadein 1.5s;
 }
 
 .videoframe {
-  width: 100%;
-  height: 450px;
-  border: 3px solid #5c4033;
-  background-color: #3b2f2f;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -321,7 +419,7 @@ body {
 .videoframe iframe {
   width: 100%;
   height: 100%;
-  border: solid;
+  border: 5px solid #8b5a2b;
 }
 
 .videolinksection {
@@ -329,6 +427,7 @@ body {
   border: 4px dashed #8b5a2b;
   padding: 30px;
   margin-top: 20px;
+  animation: fadeup 1.5s;
 }
 
 .videolinksection h2 {
@@ -343,14 +442,12 @@ body {
   padding: 15px 30px;
   background-color: #5c4033;
   color: #faebd7;
-  text-decoration: none;
-  border: 3px solid #8b5a2b;
-  transition: transform 0.3s;
+    border: 3px solid #8b5a2b;
 }
 
 .videolink:hover {
   background-color: #8b5a2b;
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .descriptionbox {
@@ -359,11 +456,16 @@ body {
   padding: 20px;
   margin-top: 30px;
   text-align: left;
+  animation: fadeup 1.5s ;
 }
+
+/*Css for report section that includes report box, headers and paragraphs*/
 .reportbox {
   max-width: 800px;
   margin: 0 auto;
   padding: 40px 20px;
+  animation: fadein 2s;
+  align-items: center;
 }
 
 .report {
@@ -371,6 +473,7 @@ body {
   border: 4px solid #8b5a2b;
   padding: 30px;
   margin-bottom: 30px;
+  animation: fadeup 2s;
 }
 
 .report h2 {
@@ -399,48 +502,115 @@ body {
   margin-bottom: 15px;
   text-align: justify;
 }
-@media (max-width: 770px) {
-  .nvibuttons {
-    flex-wrap: wrap;
+.report a {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #3b2f2f;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+/*Media Queries for decreasing screen size*/
+@media (max-width: 777px) {
+  .nvibar {
     justify-content: center;
   }
 
   .nvibuttons a {
-    padding: 8px 12px;
-    font-size: 14px;
+    font-size: 16px;
+    text-align: center;
   }
+
   .mainintro {
-    flex-direction: column; 
-    text-align: center;     
+    grid-template-columns: 1fr;
+    text-align: center;
     padding: 30px 20px;
+    gap: 25px;
   }
 
-  .galleryphoto {
-    width: 100%;
-    max-width: 300px;
-    margin:10px auto;
+  .photo1 {
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
   }
 
-  .intro h1 {
-    font-size: 22px; 
+  .subintro p {
+    max-width: 100%;
   }
 
-  .projectrow {
-    flex-direction: column;
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
   }
 
-  .cardproject {
-    margin-bottom: 20px;
-  }
   .contact {
-    flex-direction: column;
-    align-items: center;
+    grid-template-columns: 1fr;
   }
 
   .videoframe {
     height: 250px;
   }
+
   .report {
     padding: 20px;
   }
+}
+/*Media queries for mobile devicies*/
+@media (max-width: 480px) {
+  .icons {
+    display: flex;
+    position: absolute;
+    right: auto;
+    top: auto;
+    transform: none;
+  }
+  .nvibar {
+    position: relative; 
+    justify-content: center;
+    padding: 10px 0; 
+    min-height: 40px;
+  }
+  .menu:checked ~ .nvibuttons {
+    display: flex;
+  }
+
+.nvibuttons {
+  margin-top: 40px;
+    display: none;
+   flex-direction: column;
+       justify-content: center;
+
+    width: 100%;
+    background-color: #5c4033;
+    border-top: 2px solid #8b5a2b;
+  }
+  .nvibuttons a {
+    padding: 15px 20px;
+    font-size: 16px;
+    text-align: center;
+    width: 100%;
+
+  }
+  .heads {
+    padding: 30px 15px;
+  }
+
+  .heads h1 {
+    font-size: 24px;
+  }
+
+  .photo1 {
+    width: 150px;
+    height: 150px;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .galleryphoto {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
 }
