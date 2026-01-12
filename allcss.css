@@ -214,16 +214,16 @@ Compatible CSS is implemented and different CSS for during hover is also impleme
   height: 180px;
   border: 2px dotted #5c4033;
   background-color: #d2b48c;
-}
-/*For the projects Section with different CSS for font sizes, and hover*/
-.projects {
-  padding: 40px 20px;
-  max-width: 900px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1;
-  gap: 30px;
-}
+  }
+  /*For the projects Section with different CSS for font sizes, and hover*/
+  .projects {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
 
 .projectrow {
   animation: fadeup 1.5s;
@@ -304,7 +304,7 @@ has required CSS, Css is different headers, paragraphs, hover*/
   border: 4px solid #8b5a2b;
   border-radius: 10px;
   animation: fadeup 2s;
-  transition: transform 1;
+  transition: transform 1s;
 }
 
 .information {
@@ -353,7 +353,7 @@ has required CSS, Css is different headers, paragraphs, hover*/
   border: 4px solid #8b5a2b;
   border-radius: 10px;
   animation: fadeup 2s;
-  transition: transform 1;
+  transition: transform 1s;
 }
 
 .formgroup {
